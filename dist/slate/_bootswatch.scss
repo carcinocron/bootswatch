@@ -501,3 +501,7 @@ legend {
     background-color: darken($gray-900, 5%);
   }
 }
+
+// app global css
+
+@import "../_app.sass"

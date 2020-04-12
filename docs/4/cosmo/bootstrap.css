@@ -11,7 +11,6 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap");
 :root {
   --blue: #2780E3;
   --indigo: #6610f2;
@@ -2260,6 +2259,11 @@ pre code {
 }
 
 .form-control::-webkit-input-placeholder {
+  color: #868e96;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
   color: #868e96;
   opacity: 1;
 }
@@ -5108,8 +5112,10 @@ input[type="button"].btn-block {
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 3;
+       -moz-column-count: 3;
             column-count: 3;
     -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
             column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
@@ -10499,4 +10505,31 @@ body {
 .progress .progress-bar {
   font-size: 8px;
   line-height: 8px;
+}
+
+ul.list-channels li.media {
+  min-height: 80px;
+}
+
+ul.list-channels li.media img.mr-3 {
+  width: 64px;
+  height: 64px;
+}
+
+ul.list-users li.media {
+  min-height: 80px;
+}
+
+ul.list-users li.media img.mr-3 {
+  width: 64px;
+  height: 64px;
+}
+
+.avatar {
+  background-color: #fff;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }

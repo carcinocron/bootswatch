@@ -253,3 +253,7 @@ table,
 .list-group {
   font-size: $font-size-sm;
 }
+
+// app global css
+
+@import "../_app.sass"

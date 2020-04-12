@@ -10506,3 +10506,30 @@ body {
   font-size: 8px;
   line-height: 8px;
 }
+
+ul.list-channels li.media {
+  min-height: 80px;
+}
+
+ul.list-channels li.media img.mr-3 {
+  width: 64px;
+  height: 64px;
+}
+
+ul.list-users li.media {
+  min-height: 80px;
+}
+
+ul.list-users li.media img.mr-3 {
+  width: 64px;
+  height: 64px;
+}
+
+.avatar {
+  background-color: #fff;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

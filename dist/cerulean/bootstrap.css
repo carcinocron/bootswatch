@@ -2266,12 +2266,12 @@ pre code {
   opacity: 1;
 }
 
-.form-control::-ms-input-placeholder {
+.form-control::-moz-placeholder {
   color: #868e96;
   opacity: 1;
 }
 
-.form-control::-moz-placeholder {
+.form-control::-ms-input-placeholder {
   color: #868e96;
   opacity: 1;
 }
@@ -5267,11 +5267,11 @@ input[type="button"].btn-block {
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 3;
-            -moz-column-count: 3;
-         column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
     -webkit-column-gap: 1.25rem;
-            -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
   }
@@ -10876,4 +10876,31 @@ a.text-dark:hover, a.text-dark:focus {
 
 .dropdown-menu .dropdown-header {
   color: #868e96;
+}
+
+ul.list-channels li.media {
+  min-height: 80px;
+}
+
+ul.list-channels li.media img.mr-3 {
+  width: 64px;
+  height: 64px;
+}
+
+ul.list-users li.media {
+  min-height: 80px;
+}
+
+ul.list-users li.media img.mr-3 {
+  width: 64px;
+  height: 64px;
+}
+
+.avatar {
+  background-color: #fff;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
