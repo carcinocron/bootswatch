@@ -25,25 +25,10 @@
       }
 
     </style>
-    <script>
-
-     var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-23019901-1']);
-      _gaq.push(['_setDomainName', "bootswatch.com"]);
-      _gaq.push(['_setAllowLinker', true]);
-      _gaq.push(['_trackPageview']);
-
-     (function() {
-       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
-
-    </script>
   </head>
   <body id="help">
 
-    
+
     <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
       <div class="container">
         <a href="../" class="navbar-brand"><img src="../_assets/img/logo-nav.svg"> Bootswatch</a>
@@ -108,7 +93,7 @@
             <p>Before continuing, ensure you've run npm install bootswatch in your local project folder. (Use either npm or yarn.)</p>
             <p>Add the following import to your top-level <code>index.js</code> (or <code>App.js</code>) file. Add it before any other .css imports.</p>
             <pre>
-import "bootswatch/dist/[theme]/bootstrap.min.css"; 
+import "bootswatch/dist/[theme]/bootstrap.min.css";
 // TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com for current theme names.)
 </pre>
             <p>Here's an example of updated imports in <code>App.js</code> to use "slate" theme (using a create-react-app fresh project.)</p>
