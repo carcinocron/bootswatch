@@ -79,7 +79,11 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['dist/*/_variables.scss', 'dist/*/_bootswatch.scss'],
+      files: [
+        'dist/*/_variables.scss',
+        'dist/*/_bootswatch.scss',
+        'dist/_app.sass',
+      ],
       tasks: 'build',
       options: {
         livereload: true,
@@ -136,7 +140,7 @@ module.exports = function (grunt) {
     grunt.config('sass.dist.files', files);
     grunt.config('sass.dist.options.implementation', sass);
     grunt.config('sass.dist.options.outputStyle', 'expanded');
- 
+
     grunt.task.run(['concat', 'sass:dist', 'postcss', 'clean:build',
       compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none',
       'copy:css']);
@@ -157,6 +161,8 @@ module.exports = function (grunt) {
     grunt.task.run('build:'+t);
   });
 
+  const themes_list_for_watching = [];
+
   grunt.registerTask('swatch', 'build a theme from scss ', function (theme) {
     var t = theme;
     if (!t) {
@@ -164,6 +170,7 @@ module.exports = function (grunt) {
         grunt.task.run('build:' + t);
       }
     } else {
+      themes_list_for_watching.push(t)
       grunt.task.run('build:' + t);
     }
   });
@@ -171,8 +178,18 @@ module.exports = function (grunt) {
   grunt.event.on('watch', function(action, filepath) {
     var path = require('path');
     var theme = path.basename(path.dirname(filepath));
-    console.log(theme);
-    grunt.config('buildtheme', theme);
+    console.log({theme});
+    if (theme === 'dist') {
+      if (themes_list_for_watching.length > 0) {
+        themes_list_for_watching.forEach(t => {
+          grunt.config('buildtheme', t);
+        })
+      }
+    } else {
+      for (t in grunt.config('swatch')) {
+        grunt.task.run('build:' + t);
+      }
+    }
   });
 
   grunt.registerTask('vendor', 'copy:vendor');
