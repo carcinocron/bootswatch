@@ -100,3 +100,8 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
     color: $gray-600;
   }
 }
+
+// app global css
+
+@import "../_app.sass";
+// @import "../_dark_theme.sass";

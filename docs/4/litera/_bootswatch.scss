@@ -266,3 +266,8 @@ table,
 .list-group {
   font-size: $font-size-sm;
 }
+
+// app global css
+
+@import "../_app.sass";
+// @import "../_dark_theme.sass";

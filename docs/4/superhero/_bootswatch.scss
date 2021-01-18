@@ -4,8 +4,8 @@
 
 // Variables ===================================================================
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" !default;
-@import url($web-font-path);
+// $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" !default;
+// @import url($web-font-path);
 
 // Navbar ======================================================================
 
@@ -298,3 +298,8 @@ label,
     background-color: $table-hover-bg;
   }
 }
+
+// app global css
+
+@import "../_app.sass";
+@import "../_dark_theme.sass";
