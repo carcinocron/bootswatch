@@ -4,8 +4,8 @@
 
 // Variables ===================================================================
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" !default;
-@import url($web-font-path);
+// $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" !default;
+// @import url($web-font-path);
 
 // Mixins ======================================================================
 
@@ -126,3 +126,8 @@ label {
     text-decoration: none;
   }
 }
+
+// app global css
+
+@import "../_app.sass";
+// @import "../_dark_theme.sass";

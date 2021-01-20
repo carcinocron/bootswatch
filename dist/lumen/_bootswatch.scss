@@ -4,8 +4,8 @@
 
 // Variables ===================================================================
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" !default;
-@import url($web-font-path);
+// $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" !default;
+// @import url($web-font-path);
 
 // Mixins ======================================================================
 
@@ -529,3 +529,8 @@ a.list-group-item {
     }
   }
 }
+
+// app global css
+
+@import "../_app.sass";
+// @import "../_dark_theme.sass";
