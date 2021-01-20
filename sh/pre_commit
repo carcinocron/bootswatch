@@ -1,0 +1,17 @@
+#!/usr/bin/env crystal
+
+# we dont want to commit the actual css files
+# because the merge conflict will be horrible
+
+globs = [
+  "./dist/*/*.min.css",
+  "./docs/4/*/*.min.css",
+  "./dist/*/*.css",
+  "./docs/4/*/*.css",
+]
+list = `ls #{globs.join(" ")}`.strip.split "\n"
+list.each do |path|
+  `git checkout #{path}`.to_s STDOUT
+end
+# p list
+`git status`.to_s STDOUT
